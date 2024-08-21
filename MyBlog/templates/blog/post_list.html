@@ -1,0 +1,5 @@
+{% for post in posts %}
+    <a href="{% url 'post-overview' post.pk  %}">{{ post.title }}, {{ post.published_date }}</a>
+    {% empty %}
+    <h1>No new posts have been added yet ;)</h1>
+{% endfor %}
