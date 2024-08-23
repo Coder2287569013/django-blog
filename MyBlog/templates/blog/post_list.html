@@ -1,3 +1,5 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'main.css' %}">
 {% for post in posts %}
     <a href="{% url 'post-overview' post.pk  %}">{{ post.title }}, {{ post.published_date }}</a>
     {% empty %}
