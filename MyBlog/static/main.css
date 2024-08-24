@@ -1,3 +1,7 @@
+body {
+    background-color: burlywood;
+}
+
 div, a {
     border-radius: 20px;
     background-color: bisque;
