@@ -2,14 +2,14 @@ body {
     background-color: burlywood;
 }
 
-div, a {
+div, a, li {
     border-radius: 20px;
     background-color: bisque;
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
 }
 
-div {
+div, li {
     display: inline-block;
     width: auto;
     height: auto;

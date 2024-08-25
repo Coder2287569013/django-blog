@@ -20,7 +20,8 @@ def post_overview(request, pk):
     
     context = {
         "post_info": post,
-        "published_recently": post.published_recently()
+        "published_recently": post.published_recently(),
+        "comments": post.comments.all()
     }
 
     return render(request, "blog/post_overview.html", context)

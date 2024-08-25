@@ -6,4 +6,13 @@
     <p>{{ post_info.published_date }}</p> 
     <p>{{ post_info.author }}</p>
     <p>{{ published_recently }}</p>
+    <ul>
+        {% for comment in comments %}
+            <li>
+                <span>{{comment.author}}</span>
+                <span>{{comment.text}}</span>
+                <span>{{comment.created_at}}</span>
+            </li>
+        {% endfor %}
+    </ul>
 </div>
