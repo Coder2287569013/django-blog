@@ -24,3 +24,15 @@ def post_overview(request, pk):
     }
 
     return render(request, "blog/post_overview.html", context)
+
+def authors_posts(request, pk):
+    try:
+        author = models.Author.objects.get(id=pk)
+    except models.Author.DoesNotExist:
+        HttpResponse("Author doesn't exist", 404)
+    
+    context = {
+        "author_posts": author.posts.all()   
+    }
+
+    return render(request, "blog/authors_posts.html", context)

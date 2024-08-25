@@ -7,7 +7,7 @@ class Post(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
     published_date = models.DateTimeField(auto_now=True)
-    author = models.ForeignKey("Author", on_delete=models.CASCADE)
+    author = models.ForeignKey("Author", on_delete=models.CASCADE, related_name="posts")
 
     def published_recently(self):
         return timezone.now() - timedelta(days=7) < self.published_date
