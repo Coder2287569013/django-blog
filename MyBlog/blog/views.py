@@ -19,7 +19,8 @@ def post_overview(request, pk):
         HttpResponse("Post doesn't exist", 404)
     
     context = {
-        "post_info": post
+        "post_info": post,
+        "published_recently": post.published_recently()
     }
 
     return render(request, "blog/post_overview.html", context)
